@@ -24,6 +24,7 @@ namespace effect {
 	void underline(uint8_t* glyph);
 	void drop(uint8_t* glyph);
 	void thin(uint8_t* glyph);
+	void narrow(uint8_t* glyph);
 	void italic(uint8_t* glyph);
 	void bold(uint8_t* glyph);
 	void normal(uint8_t* glyph);

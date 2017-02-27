@@ -22,18 +22,23 @@ void effect::drop(uint8_t* dat){
 }
 void effect::thin(uint8_t* dat){
 	for(uint8_t i = 0; i < 8; i++){
-		*(dat+i) = ((*(dat+i) >> 1)&0xFE) | (*(dat+i)&0x01); //just get rid of 2nd column from right
+		*(dat+i) = ((*(dat+i) >> 1)&0xFE) | (*(dat+i)&0x01); //discard 2nd column
+	}
+}
+void effect::narrow(uint8_t* dat){
+	for(uint8_t i = 0; i < 8; i++){
+		*(dat+i) = ((*(dat+i) >> 1)&0xFE) | (*(dat+i)&0x03); //merge 2nd and 3rd column together
 	}
 }
 void effect::italic(uint8_t* dat){
-	thin(dat);
+	narrow(dat);
 
 	for(uint8_t i = 4; i < 8; i++){
 		*(dat+i) = *(dat+i) << 1;
 	}
 }
 void effect::bold(uint8_t* dat){
-	thin(dat);
+	narrow(dat);
 	for(uint8_t i = 0; i < 8; i++){
 		*(dat+i) |= *(dat+i) << 1;
 	}
