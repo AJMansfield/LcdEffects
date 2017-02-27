@@ -103,7 +103,7 @@ public:
 	 */
 	void applyEffect(char str[], const size_t begin, const size_t end, effect_t effect);
 
-//private:
+private:
 	struct packed_glyph_t{
 		uint8_t l0 : 5;
 		uint8_t l1 : 5;
