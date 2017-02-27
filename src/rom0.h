@@ -1,3 +1,18 @@
+/**
+ *	@file	rom0.h
+ *	@brief	Character ROM definitions.
+ *	@author	Anson Mansfield
+ *	@date 	2017-02-26
+ *
+ *	The character set defined here is the one used by HD44780 LCD controllers
+ *	configured with the A00 mask rom.
+ *
+ *	Note that presently only only the lower half of the ROM is implemented since
+ *	the upper half mainly contains non-english-language characters and math symbols
+ *	that are not commonly used. This is done to save storage space, as even without
+ *	the additional characters, these definitions take a significant amount of storage
+ *	space.
+ */
 
 template<>
 const unsigned char LcdEffects<0>::glyph_begin = 0x20;

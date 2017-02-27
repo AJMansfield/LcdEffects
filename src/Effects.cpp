@@ -20,5 +20,23 @@ void effect::drop(uint8_t* dat){
 	memmove(dat+1, dat, 7);
 	*dat = 0x00;
 }
-void effect::nothing(uint8_t* dat){
+void effect::thin(uint8_t* dat){
+	for(uint8_t i = 0; i < 8; i++){
+		*(dat+i) = ((*(dat+i) >> 1)&0xFE) | (*(dat+i)&0x01); //just get rid of 2nd column from right
+	}
+}
+void effect::italic(uint8_t* dat){
+	thin(dat);
+
+	for(uint8_t i = 4; i < 8; i++){
+		*(dat+i) = *(dat+i) << 1;
+	}
+}
+void effect::bold(uint8_t* dat){
+	thin(dat);
+	for(uint8_t i = 0; i < 8; i++){
+		*(dat+i) |= *(dat+i) << 1;
+	}
+}
+void effect::normal(uint8_t* dat){
 }

@@ -1,10 +1,25 @@
+/**
+ *	@file	Cache.h
+ *	@brief	A cache implementation, used for caching characters by LcdEffects.
+ *	@author	Anson Mansfield
+ *	@date 	2017-02-26
+ */
+
 #ifndef CACHE_H
 #define CACHE_H
 
 #include <stdint.h>
-#define INCLUDE_PRINTF
-#include <Arduino.h>
 
+/**
+ *	@brief	A cache implementation, used for LcdEffects' character cache.
+ *	
+ *	This class was not designed for general use, and is difficult to use correctly,
+ *	but feel free to use it if you can figure it out.
+ *	
+ *	Of note is that this cache _only stores keys_, and leaves generating and storing
+ *	(or not storing) the corresponding values (e.g. in an array or other structure)
+ *	to the user.
+ */
 template<typename element_t, typename size_t = uint8_t, size_t size = 0, typename age_t = uint8_t>
 class Cache {
 public:
@@ -17,7 +32,7 @@ public:
 	void setRange(size_t first, size_t last);
 	void clear(element_t& zero);
 
-//private:
+private:
 
 	element_t cache[size];
 
