@@ -1,8 +1,12 @@
 
+template<>
+const unsigned char LcdEffects<0>::glyph_begin = 0x20;
 
-const unsigned char LcdEffects::glyph_begin = 0x20;
-const unsigned char LcdEffects::glyph_end = 0x80;
-const PROGMEM LcdEffects::packed_glyph_t LcdEffects::glyph_data[] =
+template<>
+const unsigned char LcdEffects<0>::glyph_end = 0x80;
+
+template<>
+const PROGMEM LcdEffects<0>::packed_glyph_t LcdEffects<0>::glyph_data[] =
 {
 {	0b00000,
 	0b00000,

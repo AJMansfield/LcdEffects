@@ -1,5 +1,7 @@
-#include "LcdEffects.h"
+#include "Effects.h"
 
+#include <avr/pgmspace.h>
+#include <string.h>
 
 void effect::invert(uint8_t* dat){
 	*(dat) = ~*(dat);
