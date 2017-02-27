@@ -75,7 +75,7 @@ void Cache<element_t,size_t,size,age_t>::setRange(size_t first, size_t last){
 template<typename element_t, typename size_t, size_t size, typename age_t>
 void Cache<element_t,size_t,size,age_t>::clear(element_t& zero){
 	use = 0;
-	for(size_t i = begin; i < end; i++){
+	for(size_t i = 0; i < size; i++){
 		used[i] = 0;
 		cache[i] = zero;
 	}
