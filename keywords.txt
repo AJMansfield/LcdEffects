@@ -6,13 +6,13 @@
 # Classes and datatypes (KEYWORD1)
 #######################################
 LcdEffects	KEYWORD1
-effect		KEYWORD1
+effect	KEYWORD1
 
 #######################################
 # Methods and functions (KEYWORD2)
 #######################################
 begin	KEYWORD2
-setSlotRange		KEYWORD2
+setSlotRange	KEYWORD2
 applyEffect	KEYWORD2
 
 ######################################
