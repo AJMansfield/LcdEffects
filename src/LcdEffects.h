@@ -64,7 +64,7 @@ public:
 	void begin();
 
 	/**
-	 *	@brief	Restricts the library to only use character slots within a certian range.
+	 *	@brief	Restricts the library to only use character slots within a certain range.
 	 *	@param	first_slot	The first slot the library should use.
 	 *	@param	last_slot	The last slot of the range, or the first disallowed.
 	 *

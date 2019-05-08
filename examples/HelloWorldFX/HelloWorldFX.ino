@@ -1,7 +1,7 @@
 /*
   Hello World FX
 
-  This circut demonstrates basic use of the LcdEffects library by displaying
+  This circuit demonstrates basic use of the LcdEffects library by displaying
   some static text.
 
   The arduino is connected to the LCD in this example over I2C, but this should work just
